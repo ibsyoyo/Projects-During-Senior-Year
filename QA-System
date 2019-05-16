@@ -1,0 +1,126 @@
+# 1) Overall comment at start of program – a clear and concise introduction that has three
+# components : 1) describe the problem to be solved well enough so that someone not
+# familiar with our class could understand, 2) give actual examples of program input and
+# output, along with usage instructions, and 3) describe the algorithm you have used to solve
+# the problem, specified in a stepwise or point by point fashion. Your introduction should also
+# include identifying information (your name, date, etc.) 
+# 
+# Name: Ibrahim Rahman
+# Due Date: April 11th, 2019
+#
+# The problem to be solved in this NLP assignment, is to create a Question Answerin system. This system
+# will be able to answer "Who/What/When/Where" questions, but not why or how. The answers will be in complete
+# answers and should be able to answer the specific question asked.
+# 
+# Program Input (command line):
+# 	#python3 qa-system.py mylogfile.txt
+#
+#
+# Program Input (after running program):
+# Where is Walt Disney World?
+# Who is Abraham Lincoln?
+# Where is Oregon?
+#
+# Program Output (respective order from above):
+#
+# This is a QA system by Ibrahim Rahman. 
+# It will try to answer questions that start with 'Who', 'What', 'When' or 'Where'. 
+# Type 'exit' to leave the program.
+#
+# Type a question or type 'exit': Where is Walt Disney World?
+# The Walt Disney World Resort, also called Walt Disney World and Disney World, is an entertainment complex in Bay 
+# Lake and Lake Buena Vista, Florida, in the United States, near the cities Orlando and Kissimmee
+# 
+# Type a question or type 'exit': Who is Abraham Lincoln?
+# Abraham Lincoln (February 12, 1809 – April 15, 1865) was an American statesman, politician, and lawyer who served as
+# the 16th president of the United States from 1861 until his assassination in April 1865
+# 
+# Type a question or type 'exit': Where is Oregon?
+# Oregon ( (listen) ORR-ih-gən) is a state in the Pacific Northwest region on the West Coast of the United States
+# 
+# Algorithm:
+# The algorithm for this program was to create a main class. This main class would take in the command line arguments.
+# It then would open the mylogfile.txt and then ask to take an user input. It would then split the user input and write
+# the input into the text file but also check if it said exit, to exit the program. If it wasn't exit, it would then
+# search wikipedia with the wikipedia api with the user input. Afterwards I tried to implement some regex's, but fell into
+# a lot of troubles, but will have to get fixed for Programming Assignment 6. After reading the search query via wikipedia
+# the output would be printed to the console/logfile from reading in the first line of the summary of wikipedia query.
+#
+#
+
+
+#these are the imports i used for this program
+import wikipedia
+import sys
+import re
+
+
+#this function opens the logfile and prints the information to logfile and console and even does the search queries
+def ask(logfile):
+	#printlogfile = open(logfile, "w")
+
+#this opens the logfile, so then we can append the log file and print out the questions, context, and answers.
+	with open(logfile, 'a') as printlogfile:
+		#printlogfile.write("test")
+		print("\nThis is a QA system by Ibrahim Rahman. \nIt will try to answer questions that start with 'Who', 'What', 'When' or 'Where'. \nType 'exit' to leave the program.")
+		
+
+# this while statement checks the user input and ends when the user types in 'exit'
+		while(1):
+			userinput = input("\nType a question or type 'exit': ")
+			splituser = userinput.split()
+			#print(splituser)
+			printlogfile.write("user question/input: \t" +str(userinput) + "\n\n")
+
+			if userinput == 'exit':
+				exit()
+			# if userinput not in wikipedia.summary(userinput):
+			# 	print("sorry")
+			# else:
+			# 	check = wikipedia.exceptions.WikipediaException(error)
+			# 	print("wikipedia exception error...???")
+
+
+			#search = wikipedia.search(userinput)
+			#search = re.sub(r'\([^)]*\)', '', str(search))
+	#this is where i take the user input and search through the wikipedia api and grab the summary context and split by periods		
+			wikipedia.set_lang("en")
+			search = wikipedia.summary(userinput)
+			search = re.split("\.", search)
+			#search = re.sub("\([^\)]*\)", '', str(search))
+			#search = re.sub(r'[\[\]]', '', str(search))
+			#"\\(.+?\\)"
+
+			#this is where I tried to implement regex's and also above to deal with different questions and how to answer
+			# i will have to heavily update this section, even though i passed most test cases today in class
+				
+			if re.search('(W|w)ho|(W|w)hat|(W|w)here|(W|w)hen', splituser[0]):
+				print("\n"+search[0])
+				if re.search('(I|i)s', splituser[1]):
+					splitsearch = search[0].split(' ')
+					#print(splitsearch)
+					# for word in splitsearch:
+					# 	answer = ""
+					# 	answer = answer + splituser[2] + " "
+					# 	answer = answer + splituser[1]+ " "
+					# for i statement goes here
+
+			
+#this is where i print to the logfiles, the systems answer and the raw context from wiki
+			printlogfile.write("systemanswer: \t" + str(search[0])+ "\n\n")
+
+			printlogfile.write("raw result from wiki: \t" + str(search)+ "\n\n")
+			
+
+#main section where i deal with the arguments and opening and closing the log file...
+
+def main():
+
+	#python3 qa-system.py mylogfile.txt
+	logfile = sys.argv[1]
+
+	open(logfile, 'w').close()
+
+	ask(logfile)
+
+main()
