@@ -1,0 +1,127 @@
+Script started on Fri Feb 22 15:40:13 2019
+
+Name: Ibrahim Rahman
+This program was created to generate random sentences via the Ngram Model.
+
+
+
+ i should they went to strain very horizon it ?
+
+ sacré nom !
+
+ by the old prince andrew’s eyes with regret it ,
+
+ i want to safeguard my orders from them all these sayings ” said by the course of about the passage he stormed and joy of genius shown any cost the emperor by his head to be reduced the baby screamed it and sighed and cannot change during the thought “here ,
+
+ but even contemptuous smile when she saw what would cross but this young nicholas began which they were men ,
+
+ no one another meeting ,
+
+ good-by !
+
+ thank god ,
+
+ i never considered ,
+
+ i know ,
+
+real	0m6.692s
+user	0m6.423s
+sys	0m0.089s
+bash-3.2$ time python3 ngram.py 2 10 input.txt input2.txt input3.txt[1P[1@3
+
+
+Name: Ibrahim Rahman
+This program was created to generate random sentences via the Ngram Model.
+
+
+
+ there are laws directing its movement lies in the stillness of morning
+
+ mary ,
+
+ ungrateful wretch !
+
+ is it ?
+
+ oh !
+
+ captain !
+
+ do you remember how he had been told that there is in the architect of nature only by their governor and held the candle ,
+
+ this victory to the walls of which she found hardest to bear the sight of murat’s mantle and ostrich plumes ,
+
+ then what are your orders about domestic
+
+ here ,
+
+real	0m7.047s
+user	0m6.769s
+sys	0m0.144s
+bash-3.2$ time python3 ngram.py 3 10 input.txt input2.txt input3.txt[C[1P[1@4
+
+
+Name: Ibrahim Rahman
+This program was created to generate random sentences via the Ngram Model.
+
+
+
+ you ought to see alexey”
+
+ what absurd nonsense you are talking nonsense !
+
+ she felt herself surrounded on all sides the borzois that
+
+ your mother
+
+ is it possible that i—the ‘chit of a girl ,
+
+ i know who has taken it ,
+
+ thee !
+
+ what then ?
+
+ none the english have not understood and cannot
+
+ haven’t i struggled to
+
+real	0m6.952s
+user	0m6.567s
+sys	0m0.219s
+bash-3.2$ time python3 ngram.py 4 10 input.txt input2.txt input3.txt[C[1P[1@5
+
+
+Name: Ibrahim Rahman
+This program was created to generate random sentences via the Ngram Model.
+
+
+
+ what is it ,
+
+ please do !
+
+ why is he here ?
+
+ was he like that incessant
+
+ i don’t know i must besides that i am going ” he
+
+ it’s a hopeless case !
+
+ you simply must
+
+ we have been expecting you
+
+ what ?
+
+ another examination !
+
+real	0m6.992s
+user	0m6.519s
+sys	0m0.306s
+bash-3.2$ exit
+exit
+
+Script done on Fri Feb 22 15:41:49 2019
