@@ -1,0 +1,80 @@
+Script started on Thu Apr  4 18:44:18 2019
+[?1034hbash-3.2$ python -v3 decision-list.py line-train.txt line-test.txt my-decision-list..txt > my-line-answers.txt
+bash-3.2$ head -50 my-decision-list.txt
+Feature: telephone              Log Val: 4.382026634673881               Sense: PHONE 
+Feature: machines               Log Val: 4.044522437723423               Sense: PRODUCT 
+Feature: sales          Log Val: 3.772588722239781               Sense: PRODUCT 
+Feature: introduced             Log Val: 3.772588722239781               Sense: PRODUCT 
+Feature: car            Log Val: 3.70805020110221                Sense: PRODUCT 
+Feature: product                Log Val: 3.639057329615259               Sense: PRODUCT 
+Feature: ibms           Log Val: 3.639057329615259               Sense: PRODUCT 
+Feature: plans          Log Val: 3.5649493574615367              Sense: PRODUCT 
+Feature: brands         Log Val: 3.5649493574615367              Sense: PRODUCT 
+Feature: cars           Log Val: 3.4849066497880004              Sense: PRODUCT 
+Feature: ps2            Log Val: 3.3978952727983707              Sense: PRODUCT 
+Feature: personal               Log Val: 3.3978952727983707              Sense: PRODUCT 
+Feature: models         Log Val: 3.3978952727983707              Sense: PRODUCT 
+Feature: phone          Log Val: 3.367295829986474               Sense: PHONE 
+Feature: general                Log Val: 3.3025850929940455              Sense: PRODUCT 
+Feature: industry               Log Val: 3.3025850929940455              Sense: PRODUCT 
+Feature: selling                Log Val: 3.3025850929940455              Sense: PRODUCT 
+Feature: maker          Log Val: 3.3025850929940455              Sense: PRODUCT 
+Feature: products               Log Val: 3.2772672850097555              Sense: PRODUCT 
+Feature: current                Log Val: 3.197224577336219               Sense: PRODUCT 
+Feature: dealers                Log Val: 3.197224577336219               Sense: PRODUCT 
+Feature: less           Log Val: 3.197224577336219               Sense: PRODUCT 
+Feature: spokesman              Log Val: 3.197224577336219               Sense: PRODUCT 
+Feature: sell           Log Val: 3.197224577336219               Sense: PRODUCT 
+Feature: foods          Log Val: 3.197224577336219               Sense: PRODUCT 
+Feature: auto           Log Val: 3.197224577336219               Sense: PRODUCT 
+Feature: compaq         Log Val: 3.197224577336219               Sense: PRODUCT 
+Feature: markets                Log Val: 3.197224577336219               Sense: PRODUCT 
+Feature: first          Log Val: 3.1400661634962708              Sense: PRODUCT 
+Feature: service                Log Val: 3.091042453358316               Sense: PHONE 
+Feature: sale           Log Val: 3.0794415416798357              Sense: PRODUCT 
+Feature: corp           Log Val: 3.0794415416798357              Sense: PRODUCT 
+Feature: stores         Log Val: 3.0794415416798357              Sense: PRODUCT 
+Feature: incs           Log Val: 3.0794415416798357              Sense: PRODUCT 
+Feature: frozen         Log Val: 3.0794415416798357              Sense: PRODUCT 
+Feature: access         Log Val: 3.044522437723423               Sense: PHONE 
+Feature: sold           Log Val: 2.9459101490553135              Sense: PRODUCT 
+Feature: under          Log Val: 2.9459101490553135              Sense: PRODUCT 
+Feature: designed               Log Val: 2.9459101490553135              Sense: PRODUCT 
+Feature: american               Log Val: 2.9459101490553135              Sense: PRODUCT 
+Feature: share          Log Val: 2.9459101490553135              Sense: PRODUCT 
+Feature: analyst                Log Val: 2.9459101490553135              Sense: PRODUCT 
+Feature: includes               Log Val: 2.9459101490553135              Sense: PRODUCT 
+Feature: 20             Log Val: 2.9459101490553135              Sense: PRODUCT 
+Feature: 50             Log Val: 2.9459101490553135              Sense: PRODUCT 
+Feature: food           Log Val: 2.9459101490553135              Sense: PRODUCT 
+Feature: apparel                Log Val: 2.9459101490553135              Sense: PRODUCT 
+Feature: analysts               Log Val: 2.871802176901592               Sense: PRODUCT 
+Feature: international          Log Val: 2.791759469228055               Sense: PRODUCT 
+Feature: gm             Log Val: 2.791759469228055               Sense: PRODUCT 
+bash-3.2$ head -10 my-line-answers.txt
+<answer instance="line-n.w8_059:8174:" senseid="phone"/>
+<answer instance="line-n.w7_098:12684:" senseid="phone"/>
+<answer instance="line-n.w8_106:13309:" senseid="phone"/>
+<answer instance="line-n.w9_40:10187:" senseid="phone"/>
+<answer instance="line-n.w9_16:217:" senseid="phone"/>
+<answer instance="line-n.w8_119:16927:" senseid="product"/>
+<answer instance="line-n.w8_008:13756:" senseid="phone"/>
+<answer instance="line-n.w8_041:15186:" senseid="phone"/>
+<answer instance="line-n.art7} aphb 05601797:" senseid="phone"/>
+<answer instance="line-n.w8_119:2964:" senseid="product"/>
+bash-3.2$ head -10 my-line-answers.txtscorer.py my-line-answers.txt line-key.txt
+
+Accuracy: 83.33333333333334
+
+Confusion Matrix:
+         Phone   Product
+Phone      52       20
+Product    53       1
+Correct prediction of phone: 52
+Incorrect prediction of phone: 20
+Correct prediction of product: 53
+Incorrect prediction of product: 1
+bash-3.2$ exit
+exit
+
+Script done on Thu Apr  4 18:45:49 2019
