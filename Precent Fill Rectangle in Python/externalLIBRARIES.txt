@@ -1,0 +1,8 @@
+external library: rectpack 
+
+install:
+pip3 install rectpack
+
+guide:
+https://github.com/secnot/rectpack
+
