@@ -1,0 +1,167 @@
+Script started on Tue Mar 19 21:26:46 2019
+time python3 tagger.py pos-train.txt pos-test.txt > pos-test-with-tags .txt
+
+real	0m0.826s
+user	0m0.737s
+sys	0m0.031s
+bash-3.2$ head -100 pos-test-with-tags.txt
+No/NNP ,/, 
+it/PRP 
+was/VBD n't/RB Black/NNP Monday/NNP 
+./. 
+But/NNP while/IN 
+the/DT New/NNP York/NNP Stock/NNP Exchange/NNP 
+did/VBD n't/RB 
+fall/NN 
+apart/NN 
+Friday/NNP 
+as/IN 
+the/DT Dow/NNP Jones/NNP Industrial/NNP Average/NNP 
+plunged/VBD 
+190.58/CD points/NNS 
+--/: most/JJS of/IN 
+it/PRP 
+in/IN 
+the/DT final/JJ hour/NN 
+--/: 
+it/PRP 
+barely/NN managed/VBD to/TO stay/VB 
+this/DT side/NN 
+of/IN 
+chaos/NN 
+./. 
+Some/NNP 
+``/`` 
+circuit/NN breakers/NNS 
+''/'' installed/VBD after/IN 
+the/DT October/NNP 1987/CD crash/NN 
+failed/VBD 
+their/PRP$ first/JJ test/NN 
+,/, 
+traders/NNS 
+say/VBP ,/, unable/JJ to/TO cool/JJ 
+the/DT selling/VBG panic/NN 
+in/IN 
+both/DT 
+stocks/NNS 
+and/CC 
+futures/NNS 
+./. 
+The/NNP 49/CD stock/NN specialist/NN firms/NNS 
+on/IN 
+the/DT Big/NNP Board/NNP floor/NN 
+--/: 
+the/DT buyers/NNS 
+and/CC 
+sellers/NN 
+of/IN 
+last/JJ resort/NN 
+who/WP 
+were/VBD criticized/VBD after/IN 
+the/DT 1987/CD crash/NN 
+--/: once/RB again/RB could/MD n't/RB handle/VB 
+the/DT selling/VBG pressure/NN 
+./. 
+Big/NNP investment/NN banks/NNS 
+refused/VBD to/TO step/VB up/RP to/TO 
+the/DT plate/NN 
+to/TO support/VB 
+the/DT beleaguered/VBD floor/NN traders/NNS 
+by/IN buying/VBG 
+big/JJ blocks/NNS 
+of/IN 
+stock/NN 
+,/, 
+traders/NNS 
+say/VBP ./. 
+Heavy/NNP 
+selling/VBG of/IN 
+Standard/NNP 
+&/CC 
+Poor/NNP 's/POS 500-stock/CD index/NN futures/NNS 
+in/IN 
+Chicago/NNP 
+relentlessly/NN beat/VBP 
+stocks/NNS 
+downward/JJ ./. 
+Seven/NNP Big/NNP Board/NNP stocks/NNS 
+--/: 
+UAL/NNP 
+,/, 
+AMR/NNP 
+,/, 
+BankAmerica/NNP 
+,/, 
+Walt/NNP Disney/NNP 
+,/, 
+Capital/NNP Cities\/ABC/NNP 
+,/, 
+Philip/NNP Morris/NNP 
+and/CC 
+Pacific/NNP Telesis/NNP Group/NNP 
+--/: stopped/VBD trading/VBG and/CC never/RB resumed/VBD ./. 
+The/NNP finger-pointing/VBG 
+has/VBZ already/RB begun/NN ./. 
+``/`` 
+The/NNP equity/NN market/NN 
+was/VBD illiquid/NN ./. 
+bash-3.2$ python3 scorer.py pos-test-with-tags.txt pos-test-key.txt > pos-taggin g-report.txt
+bash-3.2$ time python3 scorer.py pos-test-with-tags.txt pos-test-key.txt > pos-t agging-report.txt
+
+real	0m0.683s
+user	0m0.650s
+sys	0m0.021s
+bash-3.2$ cat pos-tagging-report.txt
+Accuracy: 85.13128255666619 
+
+	RB	,	PRP	VBD	NNP	.	CC	IN	DT	VB	CD	NNS	:	JJS	JJ	NN	TO	``	''	VBN	PRP$	VBP	WP	MD	VBG	POS	VBZ	(	)	WRB	WDT	RP	$	JJR	EX	UH	RBR	NNPS	PDT	WP$	RBS	#		FW	SYM	LS	
+RB	1427	0	0	16	163	0	5	169	8	6	0	0	0	2	75	125	0	0	0	0	0	0	0	0	13	0	0	0	0	0	0	35	0	0	4	0	0	0	0	0	0	0	0	0	0	0	
+,	0	3070	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+PRP	0	0	746	0	296	0	0	0	0	0	6	0	0	0	0	0	0	0	0	0	8	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+VBD	0	0	0	1766	3	0	0	0	0	9	0	0	0	0	0	17	0	0	0	41	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+NNP	0	0	0	0	5810	0	0	1	0	0	28	0	0	0	0	2	0	0	0	0	0	0	0	0	98	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+.	0	0	0	0	0	2363	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+CC	1	0	0	0	157	0	1207	0	8	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+IN	13	0	0	0	341	0	0	5442	0	0	0	0	0	0	10	4	0	0	0	0	0	0	0	0	28	0	0	0	0	0	0	28	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+DT	0	0	0	0	545	0	0	68	4202	0	0	0	0	0	2	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+VB	2	0	0	27	29	0	0	4	0	879	0	0	0	0	22	405	0	0	0	4	0	204	0	0	12	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	
+CD	0	0	0	2	36	0	0	0	0	0	1897	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+NNS	0	0	0	26	136	0	0	0	0	0	22	2508	0	0	16	608	0	0	0	0	0	0	0	0	96	0	101	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+:	0	0	0	0	0	0	0	0	0	0	0	0	336	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+JJS	0	0	0	0	12	0	0	0	0	0	0	0	0	108	0	8	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+JJ	34	0	0	324	271	0	0	4	0	7	65	0	0	0	2152	709	0	0	0	10	0	3	0	0	131	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+NN	1	0	0	77	135	0	2	6	0	125	7	6	0	0	94	6684	0	0	0	2	0	36	0	3	401	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+TO	0	0	0	0	13	0	0	0	0	0	0	0	0	0	0	0	1232	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+``	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	535	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+''	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	528	0	0	0	0	0	0	5	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+VBN	0	0	0	790	15	0	0	0	0	35	0	0	0	0	1	19	0	0	0	237	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+PRP$	0	0	0	0	19	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	491	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+VBP	0	0	0	5	6	0	0	1	0	99	0	0	0	0	3	85	0	0	0	2	0	600	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+WP	0	0	0	0	6	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	105	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+MD	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	582	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+VBG	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	816	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+POS	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	551	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+VBZ	0	0	0	6	8	0	0	0	0	0	0	40	0	0	0	92	0	0	0	0	0	0	0	0	1	77	1012	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+(	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	76	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+)	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	76	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+WRB	1	0	0	0	24	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	107	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+WDT	0	0	0	0	1	0	0	138	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	139	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+RP	30	0	0	0	1	0	0	38	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	107	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+$	0	0	0	0	11	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	364	0	0	0	0	0	0	0	0	0	0	0	0	0	
+JJR	0	0	0	0	5	0	0	0	0	0	0	0	0	0	1	16	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	98	0	0	74	0	0	0	0	0	0	0	0	0	
+EX	0	0	0	0	25	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	32	0	0	0	0	0	0	0	0	0	0	0	
+UH	3	0	0	0	4	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+RBR	0	0	0	0	4	0	0	0	0	0	0	0	0	0	2	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	39	0	0	64	0	0	0	0	0	0	0	0	0	
+NNPS	0	0	0	0	39	0	0	0	0	0	1	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+PDT	0	0	0	0	2	0	0	0	10	0	0	0	0	0	3	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+WP$	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	21	0	0	0	0	0	0	
+RBS	0	0	0	0	4	0	0	0	0	0	0	0	0	26	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+#	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	5	0	0	0	0	
+	0	0	0	1	1	0	0	0	0	0	0	0	0	0	1	1	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	6	0	0	0	0	0	0	0	0	0	
+FW	0	0	0	0	10	0	0	0	0	0	0	0	0	0	0	10	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+SYM	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+LS	0	0	0	0	0	0	0	0	0	0	4	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	
+bash-3.2$ exit
+exit
+
+Script done on Tue Mar 19 21:28:00 2019
