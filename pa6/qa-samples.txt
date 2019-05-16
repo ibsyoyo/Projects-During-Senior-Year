@@ -1,0 +1,139 @@
+RIGHT user question/input: 	Who is C3PO
+
+systemanswer: 	C3PO  or SeeThreepio is a humanoid robot character from the Star Wars franchise who appears in the original trilogy the prequel trilogy and the sequel trilogy
+
+RIGHT user question/input: 	Who is Kanye
+
+systemanswer: 	Kanye Omari West  is an American rapper singer songwriter record producer entrepreneur and fashion designer
+
+RIGHT user question/input: 	Who is the Incredible Hulk
+
+systemanswer: 	The Incredible Hulk is an ongoing comic book series featuring the Marvel Comics superhero the Hulk and his alter ego Dr
+
+WRONG user question/input: 	Who was Jesus
+
+systemanswer: 	Jesus c
+
+
+RIGHTuser question/input: 	who is god
+
+systemanswer: 	In monotheistic thought God is conceived of as the supreme being creator deity and principal object of faith
+
+
+RIGHT user question/input: 	Who is Katy Perry
+
+systemanswer: 	Katheryn Elizabeth Hudson  known professionally as Katy Perry is an American singer songwriter and television judge
+
+
+RIGHT user question/input: 	Who is Terry Pratchett
+
+systemanswer: 	Sir Terence David John Pratchett   was an English author of fantasy novels especially comical works
+
+
+RIGHT user question/input: 	What is the answer to life the universe and everything
+
+systemanswer: 	Life the Universe and Everything  is the third book in the fivevolume Hitchhikers Guide to the Galaxy science fiction trilogy by British writer Douglas Adams
+
+
+WRONG user question/input: 	what is eid
+
+systemanswer: 	Eid Mubarak or  is an Arabic term that means happy holiday
+
+RIGHT user question/input: 	what is judaism
+
+systemanswer: 	Judaism  is the ethnic religion of the Jewish people
+
+RIGHT user question/input: 	What is hockey
+
+systemanswer: 	Ice hockey is a contact team sport played on ice usually in a rink in which two teams of skaters use their sticks to shoot a vulcanized rubber puck into their opponents net to score points
+
+
+RIGHT user question/input: 	What is the Talking Dead
+
+systemanswer: 	Talking Dead is a live television aftershow in which host Chris Hardwick discusses episodes of the AMC television series The Walking Dead and Fear the Walking Dead with guests including celebrity fans cast members and crew from the series
+
+
+RIGHT user question/input: 	What is the Smithsonian
+
+systemanswer: 	The Smithsonian Institution  also known simply as the Smithsonian is a group of museums and research centers administered by the Government of the United States
+
+
+RIGHT user question/input: 	what is a car
+
+systemanswer: 	A car  is a wheeled motor vehicle used for transportation
+
+
+WRONG user question/input: 	When was Justin Bieber born?
+
+systemanswer: 	Justin Drew Bieber  is a Canadian singersongwriter
+
+
+RIGHT user question/input: 	when is christmas
+
+systemanswer: 	Christmas is an annual festival commemorating the birth of Jesus Christ observed on December 25
+
+RIGHT user question/input: 	When was World War 1
+
+systemanswer: 	World War II  also known as the Second World War was a global war that lasted from 1939 to 1945
+
+
+RIGHT user question/input: 	When was World War I
+
+systemanswer: 	World War I  also known as the First World War or the Great War was a global war originating in Europe that lasted from 28 July 1914 to 11 November 1918
+
+
+WRONG user question/input: 	When was Julius Caesar born
+
+systemanswer: 	The Julii Caesares were the most illustrious family of the patrician gens Julia
+
+
+WRONG user question/input: 	when is columbus day
+
+systemanswer: 	Columbus Day is a national holiday in many countries of the Americas and elsewhere which officially celebrates the anniversary of Christopher Columbuss arrival in the Americas on October 12 1492 
+
+WRONG user question/input: 	When is Martin Luther King Day
+
+systemanswer: 	Martin Luther King Jr
+
+
+WRONG user question/input: 	When was Bill Gates born
+
+systemanswer: 	William Henry Gates III   is an American business magnate investor author philanthropist and humanitarian
+
+
+WRONG user question/input: 	Where is Australia
+
+systemanswer: 	Where Is the Love is a song by American hip hop group The Black Eyed Peas
+
+
+RIGHT user question/input: 	where is ethiopia
+
+systemanswer: 	Ethiopia  officially the Federal Democratic Republic of Ethiopia  is a country in the northeastern part of Africa popularly known as the Horn of Africa
+
+
+RIGHT user question/input: 	Where is Rome
+
+systemanswer: 	Rome  is the capital city and a special comune of Italy 
+
+
+WRONG user question/input: 	where is canada
+
+systemanswer: 	Where Is the Love is a song by American hip hop group The Black Eyed Peas
+
+
+WRONG user question/input: 	Where was WrestleMania 32
+
+systemanswer: 	WrestleMania 32 was the 32nd annual WrestleMania professional wrestling payperview  event and WWE Network event produced by WWE
+
+
+WRONG user question/input: 	Where was Super Bowl LIII
+
+systemanswer: 	Super Bowl LIII was an American football game played to determine the champion of the National Football League  for the 2018 season
+
+
+RIGHT user question/input: 	Where is the Vatican
+
+systemanswer: 	Vatican City  officially Vatican City State  is an independent citystate enclaved within Rome Italy
+
+
+
